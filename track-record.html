@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Record — Quasar</title>
+  <meta name="description" content="Quasar's adaptive paper trading performance with regime context. Verified results from Cryptohopper.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Quasar Logo" class="logo-img">
+        <span class="logo-text">Quasar</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="regime-states.html">Regime States</a>
+        <a href="track-record.html" class="active">Track Record</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">Performance</span>
+        <h1>Adaptive Performance with Regime Context</h1>
+        <p>All results below are from verified paper trading on Cryptohopper. No real capital is involved.</p>
+      </div>
+    </div>
+
+    <!-- ═══ DISCLAIMER ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="disclaimer-note" style="max-width: 740px;">
+          <p>
+            <strong>Paper trading disclaimer:</strong> All performance data on this page is derived
+            from paper trading (simulated trading) on the Cryptohopper platform. Paper trading
+            does not involve real capital and does not account for slippage, liquidity constraints,
+            or real-world execution challenges. Past performance — whether from paper trading or
+            real trading — is not indicative of future results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PERFORMANCE BY REGIME ═══ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">Regime-Specific Performance</span>
+          <h2>Performance varies by regime — as expected</h2>
+        </div>
+        <div style="max-width: 740px;">
+          <p>
+            Because Quasar adapts its strategy to market conditions, performance should
+            be evaluated in the context of the prevailing regime. A single aggregate number
+            obscures important information about where the system performs well — and where it doesn't.
+          </p>
+        </div>
+        <div class="regime-grid" style="margin-top: 2rem;">
+          <div class="regime-card trending">
+            <h3>Trending Regime</h3>
+            <p>
+              Momentum-weighted signals tend to perform best when clear trends persist
+              for multiple 4-hour candles. Performance degrades at trend reversals.
+            </p>
+            <div class="regime-stat">
+              Signals fired: Higher frequency<br>
+              Average confidence: 82–88
+            </div>
+          </div>
+          <div class="regime-card ranging">
+            <h3>Ranging Regime</h3>
+            <p>
+              Reversion-weighted signals capture oscillations within defined ranges.
+              Performance is lower due to reduced position sizes and tighter ranges.
+            </p>
+            <div class="regime-stat">
+              Signals fired: Standard frequency<br>
+              Average confidence: 78–84
+            </div>
+          </div>
+          <div class="regime-card uncertain">
+            <h3>Uncertain Regime</h3>
+            <p>
+              Capital protection mode. Fewer signals, minimum position sizes.
+              Designed to minimize drawdown rather than generate returns.
+            </p>
+            <div class="regime-stat">
+              Signals fired: -50% frequency<br>
+              Focus: Drawdown minimization
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SIGNAL HISTORY TABLE ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">Signal Log</span>
+          <h2>Recent signal history</h2>
+          <p>Sample of recent signals with regime context and confidence scores. Updated periodically.</p>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="track-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Pair</th>
+                <th>Direction</th>
+                <th>Regime</th>
+                <th>Confidence</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="disclaimer-note" style="margin-top: 2rem; max-width: 740px;">
+          <p>
+            Signal history is provided for transparency purposes only. Individual signal
+            outcomes do not predict future performance. Regime classification is determined
+            at signal entry time and may change during the trade duration. Not financial advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT TO EXPECT ═══ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">Expectations</span>
+          <h2>What to expect from an adaptive system</h2>
+        </div>
+        <div style="max-width: 740px;">
+          <ul class="arrow-list">
+            <li>Performance will vary significantly between market regimes — this is by design</li>
+            <li>In uncertain regimes, Quasar will trade less and returns may be flat or negative</li>
+            <li>Regime transitions are the highest-risk periods for the system</li>
+            <li>The confidence filter means fewer trades but higher average signal quality</li>
+            <li>Drawdowns are expected — no system avoids them entirely</li>
+          </ul>
+          <div class="disclaimer-note" style="margin-top: 2rem;">
+            <p>
+              Unlike fixed strategies, adaptive strategies change their behavior based on
+              detected market conditions. Users should not extrapolate performance from one
+              regime to another. Past performance is not indicative of future results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-text">Quasar</span>
+          <p>ML-enhanced adaptive trading signals on Cryptohopper. All results from verified paper trading. Not financial advice.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="regime-states.html">Regime States</a></li>
+            <li><a href="track-record.html">Track Record</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="research.html">Research</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="mailto:quasar@cryptohopper.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Quasar Signals. All trading results are from paper trading. Not financial advice.</p>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="disclaimer-modal-overlay">
+    <div class="disclaimer-modal">
+      <h3>&#x26A0;&#xFE0F; Important Notice</h3>
+      <p>This website provides information about Quasar's paper trading activities on Cryptohopper. All results shown are from paper trading — no real capital is involved.</p>
+      <p>Nothing on this website constitutes financial advice. Cryptocurrency trading involves substantial risk. You may lose all invested capital. Past performance does not guarantee future results.</p>
+      <p>By continuing to use this site, you acknowledge that you have read and understood this disclaimer.</p>
+      <button class="btn btn-primary disclaimer-accept">I understand — Continue</button>
+    </div>
+  </div>
+
+  <div class="cookie-banner">
+    <p>We use analytics cookies to improve your experience. We do not sell your data.</p>
+    <button class="btn btn-primary cookie-accept">Accept</button>
+    <button class="btn btn-secondary cookie-manage">Manage preferences</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

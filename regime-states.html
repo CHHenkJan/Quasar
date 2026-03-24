@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regime States — Quasar</title>
+  <meta name="description" content="Understanding Quasar's three market regime states: Trending, Ranging, and Uncertain. How each regime affects strategy behavior.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo.svg">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.svg" alt="Quasar Logo" class="logo-img">
+        <span class="logo-text">Quasar</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="regime-states.html" class="active">Regime States</a>
+        <a href="track-record.html">Track Record</a>
+        <a href="products.html">Products</a>
+        <a href="research.html">Research</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-header">
+      <div class="container">
+        <span class="section-label">Regime Classification</span>
+        <h1>What Trending, Ranging &amp; Uncertain Mean</h1>
+        <p>Quasar classifies every 4-hour candle into one of three regime states. Each state triggers a different strategy configuration.</p>
+      </div>
+    </div>
+
+    <!-- ═══ DETAILED REGIME STATES ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="regime-grid">
+          <div class="regime-card trending">
+            <div class="regime-icon">&#x1F7E3;</div>
+            <h3>State 1: Trending</h3>
+            <p>
+              ADX &gt; 25. Clear directional movement detected across multiple indicators.
+              Momentum strategies are activated.
+            </p>
+            <p>
+              Quasar allocates 70% weight to momentum indicators (MACD direction, RSI trend
+              confirmation). Reversion signals are suppressed to avoid premature counter-trend
+              entries.
+            </p>
+            <div class="regime-stat">
+              Signal frequency: Normal<br>
+              Position size: Standard<br>
+              Momentum weight: 70%
+            </div>
+          </div>
+          <div class="regime-card ranging">
+            <div class="regime-icon">&#x1F535;</div>
+            <h3>State 2: Ranging</h3>
+            <p>
+              ADX &lt; 20. Price oscillating between support and resistance levels.
+              Mean reversion strategies are activated.
+            </p>
+            <p>
+              Quasar allocates 60% weight to reversion indicators (Bollinger Band boundaries,
+              RSI overbought/oversold). Momentum signals are dampened.
+            </p>
+            <div class="regime-stat">
+              Signal frequency: Normal<br>
+              Position size: Reduced (-25%)<br>
+              Reversion weight: 60%
+            </div>
+          </div>
+          <div class="regime-card uncertain">
+            <div class="regime-icon">&#x26AA;</div>
+            <h3>State 3: Uncertain</h3>
+            <p>
+              Mixed signals. ADX between 20–25. Indicators disagree on market direction.
+              No clear regime detected.
+            </p>
+            <p>
+              Quasar reduces all signal frequency by 50% and sets position sizes to minimum.
+              Capital protection mode is active until a clear regime re-emerges.
+            </p>
+            <div class="regime-stat">
+              Signal frequency: -50%<br>
+              Position size: Minimum<br>
+              Mode: Capital protection
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW TRANSITIONS WORK ═══ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">Regime Transitions</span>
+          <h2>How Quasar handles regime shifts</h2>
+        </div>
+        <div style="max-width: 740px;">
+          <p>
+            Regime transitions are the most critical moments in adaptive trading. When the
+            market shifts from trending to ranging (or vice versa), Quasar follows a
+            structured transition protocol:
+          </p>
+          <ul class="arrow-list">
+            <li><strong>Confirmation period:</strong> A regime change requires 2 consecutive 4-hour candles confirming the new state before full weight reallocation.</li>
+            <li><strong>Gradual weight shift:</strong> Indicator weights transition over 2 candles rather than switching instantly, reducing whipsaw risk.</li>
+            <li><strong>Open position management:</strong> Existing positions maintain their original stop loss and take profit levels. Only new signals use updated weights.</li>
+            <li><strong>Uncertain buffer:</strong> The "uncertain" state acts as a buffer between trending and ranging, preventing rapid oscillation between strategies.</li>
+          </ul>
+          <div class="disclaimer-note" style="margin-top: 2rem;">
+            <p>
+              Despite these safeguards, regime misclassification remains a core risk of adaptive
+              systems. Quasar may incorrectly classify a trending market as ranging during
+              volatile transitions, leading to strategy misalignment. Not financial advice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INDICATOR BREAKDOWN ═══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <span class="section-label">Indicators</span>
+          <h2>The classification inputs</h2>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-header">
+              <span class="product-name">ADX (14)</span>
+            </div>
+            <p>
+              The Average Directional Index measures trend strength regardless of direction.
+              ADX &gt; 25 confirms a trend; ADX &lt; 20 confirms ranging. The 20–25 zone is
+              the "uncertain" buffer.
+            </p>
+            <span class="product-tag">Primary regime classifier</span>
+          </div>
+          <div class="product-card">
+            <div class="product-header">
+              <span class="product-name">Bollinger Band Width</span>
+            </div>
+            <p>
+              Measures volatility expansion and contraction. Expanding bands support trending
+              classification; contracting bands support ranging classification.
+            </p>
+            <span class="product-tag">Volatility confirmation</span>
+          </div>
+          <div class="product-card">
+            <div class="product-header">
+              <span class="product-name">RSI (14)</span>
+            </div>
+            <p>
+              Evaluates directional momentum. Persistent readings above 55 or below 45
+              confirm trend direction. Oscillation between 40–60 supports ranging.
+            </p>
+            <span class="product-tag">Momentum state</span>
+          </div>
+          <div class="product-card">
+            <div class="product-header">
+              <span class="product-name">MACD Ensemble</span>
+            </div>
+            <p>
+              Cross-references MACD histogram direction, signal line relationship, and
+              zero-line position. Agreement across all three sub-components strengthens
+              regime classification.
+            </p>
+            <span class="product-tag">Consensus validation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-text">Quasar</span>
+          <p>ML-enhanced adaptive trading signals on Cryptohopper. All results from verified paper trading. Not financial advice.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="regime-states.html">Regime States</a></li>
+            <li><a href="track-record.html">Track Record</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="research.html">Research</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="mailto:quasar@cryptohopper.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Quasar Signals. All trading results are from paper trading. Not financial advice.</p>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="disclaimer-modal-overlay">
+    <div class="disclaimer-modal">
+      <h3>&#x26A0;&#xFE0F; Important Notice</h3>
+      <p>This website provides information about Quasar's paper trading activities on Cryptohopper. All results shown are from paper trading — no real capital is involved.</p>
+      <p>Nothing on this website constitutes financial advice. Cryptocurrency trading involves substantial risk. You may lose all invested capital. Past performance does not guarantee future results.</p>
+      <p>By continuing to use this site, you acknowledge that you have read and understood this disclaimer.</p>
+      <button class="btn btn-primary disclaimer-accept">I understand — Continue</button>
+    </div>
+  </div>
+
+  <div class="cookie-banner">
+    <p>We use analytics cookies to improve your experience. We do not sell your data.</p>
+    <button class="btn btn-primary cookie-accept">Accept</button>
+    <button class="btn btn-secondary cookie-manage">Manage preferences</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
