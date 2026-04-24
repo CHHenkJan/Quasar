@@ -1,107 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<svg width="64" height="64" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1a0e2e"/>
-      <stop offset="100%" stop-color="#0a060f"/>
-    </radialGradient>
-    <radialGradient id="sphere" cx="40%" cy="35%" r="50%">
-      <stop offset="0%" stop-color="#c084fc"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#6d28d9"/>
-    </radialGradient>
-    <radialGradient id="sphereGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="ring1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9"/>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6a2ec4"/>
     </linearGradient>
-    <linearGradient id="ring2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#6d28d9" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.8"/>
-    </linearGradient>
-    <linearGradient id="ring3" x1="50%" y1="0%" x2="50%" y2="100%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.7"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="sparkGlow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="512" height="512" rx="80" fill="url(#bg)"/>
-
-  <!-- Sphere glow -->
-  <circle cx="256" cy="256" r="100" fill="url(#sphereGlow)"/>
-
-  <!-- Orbital ring 1 — tilted left -->
-  <g filter="url(#glow)">
-    <ellipse cx="256" cy="256" rx="175" ry="70" fill="none" stroke="url(#ring1)" stroke-width="2.5"
-      transform="rotate(-30 256 256)"/>
-  </g>
-
-  <!-- Orbital ring 2 — tilted right -->
-  <g filter="url(#glow)">
-    <ellipse cx="256" cy="256" rx="175" ry="70" fill="none" stroke="url(#ring2)" stroke-width="2.5"
-      transform="rotate(30 256 256)"/>
-  </g>
-
-  <!-- Orbital ring 3 — horizontal -->
-  <g filter="url(#glow)">
-    <ellipse cx="256" cy="256" rx="175" ry="55" fill="none" stroke="url(#ring3)" stroke-width="2"
-      transform="rotate(0 256 256)"/>
-  </g>
-
-  <!-- Central sphere -->
-  <circle cx="256" cy="256" r="48" fill="url(#sphere)"/>
-  <!-- Sphere highlight -->
-  <ellipse cx="244" cy="242" rx="18" ry="14" fill="rgba(255,255,255,0.15)" transform="rotate(-15 244 242)"/>
-
-  <!-- Teal sparkle — left -->
-  <g filter="url(#sparkGlow)" transform="translate(88, 256)">
-    <path d="M0,-18 L4,0 L0,18 L-4,0 Z" fill="#2ae8c0"/>
-    <path d="M-18,0 L0,-4 L18,0 L0,4 Z" fill="#2ae8c0"/>
-    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
-  </g>
-
-  <!-- Teal sparkle — right -->
-  <g filter="url(#sparkGlow)" transform="translate(424, 256)">
-    <path d="M0,-18 L4,0 L0,18 L-4,0 Z" fill="#2ae8c0"/>
-    <path d="M-18,0 L0,-4 L18,0 L0,4 Z" fill="#2ae8c0"/>
-    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
-  </g>
-
-  <!-- Purple sparkle — top -->
-  <g filter="url(#sparkGlow)" transform="translate(256, 134)">
-    <path d="M0,-12 L3,0 L0,12 L-3,0 Z" fill="#c084fc"/>
-    <path d="M-12,0 L0,-3 L12,0 L0,3 Z" fill="#c084fc"/>
-    <circle cx="0" cy="0" r="2" fill="#ffffff"/>
-  </g>
-
-  <!-- Small purple sparkle — top-right -->
-  <g filter="url(#sparkGlow)" transform="translate(340, 158)">
-    <path d="M0,-7 L2,0 L0,7 L-2,0 Z" fill="#a855f7"/>
-    <path d="M-7,0 L0,-2 L7,0 L0,2 Z" fill="#a855f7"/>
-  </g>
-
-  <!-- Small purple sparkle — bottom-left -->
-  <g filter="url(#sparkGlow)" transform="translate(172, 346)">
-    <path d="M0,-7 L2,0 L0,7 L-2,0 Z" fill="#a855f7"/>
-    <path d="M-7,0 L0,-2 L7,0 L0,2 Z" fill="#a855f7"/>
+  <rect width="200" height="200" rx="44" fill="url(#favGrad)"/>
+  <g transform="translate(100,100) scale(5.55) translate(-18,-18)">
+    <circle cx="18" cy="18" r="6" fill="#0a060f"/>
+    <circle cx="18" cy="18" r="12" fill="none" stroke="#0a060f" stroke-width="1.2" stroke-dasharray="2 3"/>
+    <path d="M18 4l2 4-2 2-2-2 2-4z" fill="#0a060f"/>
+    <path d="M18 32l-2-4 2-2 2 2-2 4z" fill="#0a060f"/>
+    <path d="M4 18l4-2 2 2-2 2-4-2z" fill="#0a060f"/>
+    <path d="M32 18l-4 2-2-2 2-2 4 2z" fill="#0a060f"/>
   </g>
 </svg>

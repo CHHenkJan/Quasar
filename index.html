@@ -37,23 +37,32 @@
     <!-- ═══ HERO ═══ -->
     <section class="hero">
       <div class="container">
-        <div class="hero-content">
-          <h1>The Market Transforms.<br><span>So Does Quasar.</span></h1>
-          <p class="hero-sub">
-            Most trading systems are calibrated for one market condition.
-            Quasar detects regime shifts in real-time — switching between momentum,
-            mean reversion, and neutral states as the market evolves.<br><br>
-            ML-enhanced. Adaptive. On Cryptohopper. Verified paper trading.
-          </p>
-          <div class="hero-ctas">
-            <a href="how-it-works.html" class="btn btn-primary">See How Regime Detection Works &rarr;</a>
-            <a href="products.html" class="btn btn-secondary">View Quasar on the Marketplace</a>
+        <div class="hero-grid">
+          <div class="hero-text hero-reveal">
+            <span class="eyebrow">The Magician · Adaptive · ML-Enhanced</span>
+            <h1>Where quantitative finance meets <em>modern AI.</em></h1>
+            <p class="hero-sub">
+              Built on the research of López de Prado, Jansen, and Hilpisch —
+              Quasar detects regime shifts that other systems miss, reweighting
+              its ensemble in real-time as markets transform.
+            </p>
+            <div class="hero-ctas">
+              <a href="how-it-works.html" class="btn btn-primary">
+                See the regime detector <span class="arr">→</span>
+              </a>
+              <a href="products.html" class="btn btn-secondary">View on Marketplace</a>
+            </div>
           </div>
-          <p class="hero-disclaimer">
-            ML-enhanced paper trading. Not financial advice. Adaptive models carry
-            unique risks including regime misclassification. Past performance is not
-            indicative of future results.
-          </p>
+          <div class="hero-mark">
+            <div class="hero-mark-inner">
+              <div class="hero-orbit"></div>
+              <img src="images/logo.svg" alt="" class="hero-mark-logo">
+            </div>
+            <div class="hero-mark-caption">
+              <span class="logo-text">Quasar</span>
+              <span class="eyebrow eyebrow-teal">Adaptive Intelligence</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -62,10 +71,10 @@
     <section class="section">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">The Core Problem</span>
-          <h2>Every fixed strategy has a regime where it fails. Quasar adapts.</h2>
+          <span class="eyebrow">The Core Problem</span>
+          <h2>Every fixed strategy has a regime where it <em>fails.</em></h2>
         </div>
-        <div style="max-width: 740px;">
+        <div class="prose">
           <p>
             A pure momentum strategy thrives when markets trend — and destroys accounts
             when markets range. A pure mean reversion strategy works in ranging markets —
@@ -80,10 +89,10 @@
             Quasar evaluates:
           </p>
           <ul class="arrow-list">
-            <li>ADX strength (is there a trend?)</li>
-            <li>Bollinger Band width (is volatility expanding or contracting?)</li>
-            <li>RSI momentum state (is price making directional progress?)</li>
-            <li>MACD ensemble agreement (are indicators aligned?)</li>
+            <li>ADX strength — is there a trend?</li>
+            <li>Bollinger Band width — is volatility expanding or contracting?</li>
+            <li>RSI momentum state — is price making directional progress?</li>
+            <li>MACD ensemble agreement — are indicators aligned?</li>
           </ul>
           <p>
             Based on this evaluation, Quasar classifies the current regime and adjusts
@@ -91,9 +100,7 @@
             factors dominate. In ranging conditions, reversion factors dominate.
             In uncertain conditions, Quasar reduces signal frequency and position size.
           </p>
-          <p>
-            This is not magic. It is adaptive systematic trading.
-          </p>
+          <p><strong>This is not magic. It is adaptive systematic trading.</strong></p>
         </div>
       </div>
     </section>
@@ -102,15 +109,15 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">Regime Detection</span>
-          <h2>Three states. Dynamic adaptation.</h2>
+          <span class="eyebrow eyebrow-teal">Regime Detection</span>
+          <h2>Three states. <em>Dynamic adaptation.</em></h2>
         </div>
         <div class="regime-grid">
           <div class="regime-card trending">
             <div class="regime-icon">&#x1F7E3;</div>
             <h3>Trending</h3>
             <p>
-              ADX &gt; 25. Clear directional movement. Momentum strategies activated.
+              ADX above 25. Clear directional movement. Momentum strategies activated.
               Quasar allocates 70% weight to momentum indicators.
             </p>
             <div class="regime-stat">Signal frequency: Normal · Position size: Standard</div>
@@ -119,7 +126,7 @@
             <div class="regime-icon">&#x1F535;</div>
             <h3>Ranging</h3>
             <p>
-              ADX &lt; 20. Price oscillating. Mean reversion activated.
+              ADX below 20. Price oscillating. Mean reversion activated.
               Quasar allocates 60% weight to reversion indicators.
             </p>
             <div class="regime-stat">Signal frequency: Normal · Position size: Reduced (-25%)</div>
@@ -131,7 +138,7 @@
               Mixed signals. ADX 20–25. No clear regime.
               Quasar reduces all signal frequency by 50%.
             </p>
-            <div class="regime-stat">Position size: Minimum · Capital protection mode active</div>
+            <div class="regime-stat">Position size: Minimum · Capital protection mode</div>
           </div>
         </div>
       </div>
@@ -141,10 +148,10 @@
     <section class="section">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">Signal Quality</span>
-          <h2>Quasar only acts when confident.</h2>
+          <span class="eyebrow">Signal Quality</span>
+          <h2>Quasar only acts <em>when confident.</em></h2>
         </div>
-        <div style="max-width: 740px;">
+        <div class="prose">
           <p>
             Every signal Quasar generates includes a confidence score from 0 to 100.
             The score reflects the degree of agreement between:
@@ -157,23 +164,23 @@
           </ul>
           <div class="confidence-visual">
             <div class="confidence-bar">
-              <span class="confidence-label">Below 75</span>
+              <span class="confidence-label">&lt; 75</span>
               <div class="confidence-track">
-                <div class="confidence-fill suppressed" data-width="74%" style="width: 0;"></div>
+                <div class="confidence-fill suppressed" data-width="60%" style="width: 0;"></div>
               </div>
               <span class="confidence-value">Suppressed</span>
             </div>
             <div class="confidence-bar">
               <span class="confidence-label">75 – 89</span>
               <div class="confidence-track">
-                <div class="confidence-fill standard" data-width="85%" style="width: 0;"></div>
+                <div class="confidence-fill standard" data-width="82%" style="width: 0;"></div>
               </div>
               <span class="confidence-value">Standard</span>
             </div>
             <div class="confidence-bar">
-              <span class="confidence-label">90+</span>
+              <span class="confidence-label">90 +</span>
               <div class="confidence-track">
-                <div class="confidence-fill maximum" data-width="95%" style="width: 0;"></div>
+                <div class="confidence-fill maximum" data-width="96%" style="width: 0;"></div>
               </div>
               <span class="confidence-value">Maximum</span>
             </div>
@@ -184,7 +191,7 @@
           </p>
           <div class="disclaimer-note">
             <p>
-              Note: confidence score is a relative measure within Quasar's model.
+              Confidence score is a relative measure within Quasar's model.
               It is not a guarantee of profitability.
             </p>
           </div>
@@ -196,23 +203,23 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">Academic Foundations</span>
-          <h2>Built on the foundations of modern quantitative finance.</h2>
+          <span class="eyebrow eyebrow-teal">Academic Foundations</span>
+          <h2>Built on the foundations of <em>modern quantitative finance.</em></h2>
         </div>
         <div class="research-grid">
           <div class="research-card">
             <h4>Feature Engineering &amp; Signal Construction</h4>
-            <span class="research-source">Marcos López de Prado — "Advances in Financial Machine Learning"</span>
+            <span class="research-source">Marcos López de Prado — Advances in Financial Machine Learning</span>
             <p>Meta-labeling framework for signal quality scoring.</p>
           </div>
           <div class="research-card">
             <h4>Regime Detection Methods</h4>
-            <span class="research-source">Ernest Chan, Stefan Jansen — "Machine Learning for Algorithmic Trading"</span>
+            <span class="research-source">Ernest Chan, Stefan Jansen — Machine Learning for Algorithmic Trading</span>
             <p>ADX + volatility-state regime classification pipeline.</p>
           </div>
           <div class="research-card">
             <h4>Ensemble Methods for Trading</h4>
-            <span class="research-source">Yves Hilpisch — "Artificial Intelligence in Finance"</span>
+            <span class="research-source">Yves Hilpisch — Artificial Intelligence in Finance</span>
             <p>Weighted indicator ensemble with dynamic allocation.</p>
           </div>
         </div>
@@ -229,8 +236,8 @@
     <section class="section">
       <div class="container">
         <div class="section-intro">
-          <span class="section-label">Products</span>
-          <h2>One system. Four ways to access it.</h2>
+          <span class="eyebrow">Products</span>
+          <h2>One system. <em>Four ways</em> to access it.</h2>
         </div>
         <div class="products-grid">
           <div class="product-card">
@@ -242,7 +249,10 @@
               Every signal includes a confidence score and regime state.
               Quality over quantity — only signals above 75 confidence.
             </p>
-            <span class="product-tag">40–80 signals/month</span>
+            <span class="product-tag">40–80 signals / month</span>
+            <a href="https://www.cryptohopper.com/signaller?signaller_id=745" target="_blank" rel="noopener noreferrer" class="btn btn-secondary product-cta">
+              View on Cryptohopper <span class="arr">→</span>
+            </a>
           </div>
           <div class="product-card">
             <div class="product-header">
@@ -254,21 +264,25 @@
               4-hour candles. 3-of-5 agreement required.
             </p>
             <span class="product-tag">Strategy Builder Config</span>
+            <button type="button" class="btn btn-secondary product-cta" disabled>Coming soon</button>
           </div>
           <div class="product-card">
             <div class="product-header">
               <span class="product-name">Template</span>
-              <span class="product-price">$39<span> once</span></span>
+              <span class="product-price">Free</span>
             </div>
             <p>
-              Complete adaptive hopper configuration.
+              Complete adaptive bot configuration.
               Includes setup guide PDF.
             </p>
-            <span class="product-tag">One-time purchase</span>
+            <span class="product-tag">Free · Includes setup guide PDF</span>
+            <a href="https://www.cryptohopper.com/marketplace/search?q=quasar&category%5B%5D=templates" target="_blank" rel="noopener noreferrer" class="btn btn-secondary product-cta">
+              View on Cryptohopper <span class="arr">→</span>
+            </a>
           </div>
-          <div class="product-card">
+          <div class="product-card featured">
             <div class="product-header">
-              <span class="product-name">Full Stack</span>
+              <span class="product-name">Copy Bots</span>
               <span class="product-price">$99<span>/mo</span></span>
             </div>
             <p>
@@ -276,6 +290,9 @@
               The complete Quasar experience.
             </p>
             <span class="product-tag">7-day free trial · Max 100 copiers</span>
+            <a href="https://www.cryptohopper.com/marketplace/search?q=quasar&category%5B%5D=copytrading" target="_blank" rel="noopener noreferrer" class="btn btn-primary product-cta">
+              View on Cryptohopper <span class="arr">→</span>
+            </a>
           </div>
         </div>
       </div>
@@ -293,6 +310,14 @@
             ML-enhanced adaptive trading signals on Cryptohopper.
             All results from verified paper trading. Not financial advice.
           </p>
+          <div class="social-links">
+            <a href="https://x.com/QuasarMagician" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Quasar on X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+            </a>
+            <a href="https://t.me/quasarthemagician" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Quasar on Telegram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.944 4.332c-.306-.254-.786-.29-1.283-.097L2.89 11.21c-.716.28-1.132.749-1.103 1.245.03.497.497.93 1.238 1.15l4.39 1.31 2.003 5.997c.112.335.332.603.622.76.173.094.37.142.57.142.236 0 .475-.066.684-.2l2.69-1.72 4.017 3.02c.247.186.539.286.838.286.112 0 .226-.014.337-.043.433-.114.772-.451.898-.894l3.922-14.76c.154-.58-.033-1.106-.39-1.402zM9.82 14.836l-.92 4.31-1.43-4.283 8.41-6.142-6.06 6.115z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-links">
           <h4>Navigate</h4>
@@ -313,8 +338,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Quasar Signals. All trading results are from paper trading. Not financial advice.</p>
-        <a href="disclaimer.html">Disclaimer</a>
+        <p>&copy; 2026 Quasar Signals · Paper trading only · Not financial advice</p>
+        <a href="disclaimer.html">Full disclaimer →</a>
       </div>
     </div>
   </footer>
@@ -322,22 +347,19 @@
   <!-- ═══ DISCLAIMER MODAL ═══ -->
   <div class="disclaimer-modal-overlay">
     <div class="disclaimer-modal">
-      <h3>&#x26A0;&#xFE0F; Important Notice</h3>
+      <span class="eyebrow">Important Notice</span>
+      <h3>This is paper trading.</h3>
       <p>
-        This website provides information about Quasar's paper trading activities
-        on Cryptohopper. All results shown are from paper trading — no real capital
-        is involved.
+        Quasar's results on this website come from a verified paper trading account
+        on Cryptohopper. No real capital is at risk in the displayed track record.
       </p>
       <p>
-        Nothing on this website constitutes financial advice. Cryptocurrency trading
-        involves substantial risk. You may lose all invested capital. Past performance
-        does not guarantee future results.
+        Nothing on this website is financial advice. Cryptocurrency trading involves
+        substantial risk of loss. Past performance does not guarantee future results.
       </p>
-      <p>
-        By continuing to use this site, you acknowledge that you have read and
-        understood this disclaimer.
-      </p>
-      <button class="btn btn-primary disclaimer-accept">I understand — Continue</button>
+      <button class="btn btn-primary disclaimer-accept">
+        I understand — continue <span class="arr">→</span>
+      </button>
     </div>
   </div>
 
@@ -345,7 +367,7 @@
   <div class="cookie-banner">
     <p>We use analytics cookies to improve your experience. We do not sell your data.</p>
     <button class="btn btn-primary cookie-accept">Accept</button>
-    <button class="btn btn-secondary cookie-manage">Manage preferences</button>
+    <button class="btn btn-secondary cookie-manage">Manage</button>
   </div>
 
   <script src="js/main.js"></script>
