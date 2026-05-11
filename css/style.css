@@ -28,10 +28,10 @@
   --teal-dim:      #1ab898;
 
   /* Text */
-  --text:          #f0eaf8;
-  --text-mute:     #b5a6cf;
-  --text-dim:      #7d6e97;
-  --text-faint:    #4a3d60;
+  --text:          #f5f0fb;
+  --text-mute:     #d8cfe8;
+  --text-dim:      #a89dbb;
+  --text-faint:    #6a5d80;
 
   /* Lines */
   --line:          #241538;
@@ -63,7 +63,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   background: var(--bg);
   color: var(--text-mute);
   line-height: 1.7;
@@ -163,7 +163,7 @@ h1 em, h2 em, h3 em, .accent {
 p {
   margin-bottom: 1.15rem;
   color: var(--text-mute);
-  font-weight: 300;
+  font-weight: 400;
 }
 p:last-child { margin-bottom: 0; }
 
@@ -390,7 +390,7 @@ main {
   line-height: 1.65;
   margin-bottom: 2.25rem;
   max-width: 560px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .hero-ctas {
@@ -896,100 +896,6 @@ main {
   font-size: 0.875rem;
   line-height: 1.6;
   margin-bottom: 0;
-}
-
-/* ══════════════════════════════════════════
-   EXCHANGE STRIP
-   ══════════════════════════════════════════ */
-
-.exchanges {
-  margin-top: 3.25rem;
-  padding: 2.5rem 2rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background:
-    radial-gradient(ellipse 70% 100% at 50% 0%, rgba(168, 85, 247, 0.06), transparent 60%),
-    linear-gradient(180deg, var(--bg-card), rgba(22, 10, 38, 0.3));
-  position: relative;
-  overflow: hidden;
-}
-.exchanges::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 2rem;
-  right: 2rem;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--purple-dim), transparent);
-}
-
-.exchanges-label {
-  text-align: center;
-  margin-bottom: 2rem;
-  display: block;
-}
-.exchanges-label::before {
-  display: none;
-}
-
-.exchanges-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1.75rem 2.5rem;
-}
-
-.exchange-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  opacity: 0.55;
-  text-decoration: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-a.exchange-item:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.exchange-item img {
-  height: 24px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.exchange-wordmark {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.25rem;
-  letter-spacing: 0.02em;
-  color: #e0d5f0;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  height: 24px;
-}
-
-@media (max-width: 768px) {
-  .exchanges {
-    padding: 2rem 1.25rem;
-  }
-  .exchanges-grid {
-    gap: 1.25rem 1.75rem;
-  }
-  .exchange-item,
-  .exchange-item img {
-    height: 22px;
-  }
-  .exchange-wordmark {
-    font-size: 1.05rem;
-    height: 22px;
-  }
 }
 
 /* ══════════════════════════════════════════
